@@ -14,7 +14,11 @@ public class StringCalculatorTest {
 	public void WhenOneNumberAsInput() {
 		assertEquals(1,StringCalculator.add("1"));
 	}
-
+	
+	@Test
+	public void WhenTwoNumbersAsInput() {
+		assertEquals(3,StringCalculator.add("1,2"));
+	}
 
 
 
