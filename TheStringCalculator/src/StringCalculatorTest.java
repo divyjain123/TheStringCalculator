@@ -1,4 +1,7 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+
 import org.junit.Test;
 
 public class StringCalculatorTest {
@@ -32,4 +35,15 @@ public class StringCalculatorTest {
 	public void testWhenDelimiterIsSpecified() {
 	    assertEquals(4+5+6, StringCalculator.add("//;\n4;5;6"));
 	}
+	
+	@Test
+	public void negativeNumbersRaiseExeption() {
+		try{
+			StringCalculator.add("-2,6,7");
+			fail("Exception");
+		}catch(RuntimeException ex) {
+				//check
+	}
+	}
+
 }
