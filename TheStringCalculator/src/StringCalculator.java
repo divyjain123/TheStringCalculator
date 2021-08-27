@@ -2,6 +2,7 @@
 
 
 public class StringCalculator {
+	
 	public static int add(String input){
 		if(input.equals("")){
 			return 0;
@@ -9,8 +10,12 @@ public class StringCalculator {
 		else if(input.contains(",")) {
 			
 			    String[] numberValues = input.split(",");
-			    return toInteger(numberValues[0]) + toInteger(numberValues[1]);
-			  
+			    int sum = 0;
+			    int n = numberValues.length;
+			    for(int i=0; i<n;i++) {
+			    	sum += toInteger(numberValues[i]);
+			    }
+			    return sum;
 		}
 		else {
 			return Integer.parseInt(input);

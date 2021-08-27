@@ -12,17 +12,17 @@ public class StringCalculatorTest {
 
 	@Test
 	public void WhenOneNumberAsInput() {
-		assertEquals(1,StringCalculator.add("1"));
+		assertEquals(4,StringCalculator.add("4"));
 	}
 	
 	@Test
 	public void WhenTwoNumbersAsInput() {
-		assertEquals(3,StringCalculator.add("1,2"));
+		assertEquals(9,StringCalculator.add("4,5"));
 	}
 	
 	@Test
 	public void WhenMultipleNumbersAsInput() {
-		assertEquals(6,StringCalculator.add("1,2,3"));
+		assertEquals(10,StringCalculator.add("1,4,5"));
 	}
 
 
