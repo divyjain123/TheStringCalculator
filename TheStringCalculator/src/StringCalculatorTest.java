@@ -1,6 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
@@ -55,6 +55,11 @@ public class StringCalculatorTest {
 			assertEquals("Negatives Not Allowed: -2,-5,-6",ex.getMessage());
 		} 
 
+	}
+	
+	@Test
+	public void NumbersBiggerThanThousandShouldBeIgnored() {
+	    assertEquals(5, StringCalculator.add("5,1001"));
 	}
 	
 
