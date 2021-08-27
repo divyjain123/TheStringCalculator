@@ -1,6 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.Test;
 
 public class StringCalculatorTest {
@@ -31,7 +29,7 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void testToSupportDiffrentDelimiter() {
-	    assertEquals(10, StringCalculator.add("//;n4;5;1"));
+	public void testWhenDelimiterIsSpecified() {
+	    assertEquals(4+5+6, StringCalculator.add("//;\n4;5;6"));
 	}
 }
