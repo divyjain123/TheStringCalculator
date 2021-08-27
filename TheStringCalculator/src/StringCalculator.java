@@ -10,9 +10,8 @@ public class StringCalculator {
 			return 0;
 		}
 		else if (input.startsWith("//")) {
-	        delimiter = input.substring(2, 3) +"|,|\n";
-	        String numbers = input.substring(input.indexOf("\n"));
-	        return sum(splitValues(numbers,delimiter));
+			
+	        return findDelimiter(input);
 		}
 		else if(input.contains(",") || input.contains("\n")) {
 			
@@ -44,5 +43,9 @@ public class StringCalculator {
 	    return sum;
 	}
 	
-	
+	private static int findDelimiter(String input) {
+		String specifiedDelimiter = input.substring(2, 3) +"|,|\n";
+        String numbers = input.substring(input.indexOf("\n"));
+        return sum(splitValues(numbers,specifiedDelimiter));
+	}
 }
