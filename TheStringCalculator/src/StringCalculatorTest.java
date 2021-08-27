@@ -29,5 +29,9 @@ public class StringCalculatorTest {
 	public void testMultipleNumbersWithNewLineDelimiter() {
 		assertEquals(7,StringCalculator.add("1\n2,4"));
 	}
-
+	
+	@Test
+	public void testToSupportDiffrentDelimiter() {
+	    assertEquals(10, StringCalculator.add("//;n4;5;1"));
+	}
 }
