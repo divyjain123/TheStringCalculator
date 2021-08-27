@@ -47,7 +47,7 @@ public class StringCalculator {
 	    }
 	    
 	    if(negativeNumbers.size() > 0) {
-			throw new RuntimeException();
+			throw new RuntimeException("Negatives Not Allowed: " + String.join(",", negativeNumbers));
 		}
 	    
 	    return sum;
