@@ -9,7 +9,7 @@ public class StringCalculator {
 		else if(input.contains(",")) {
 			
 			    String[] numberValues = input.split(",");
-			    return Integer.parseInt(numberValues[0]) + Integer.parseInt(numberValues[1]);
+			    return toInteger(numberValues[0]) + toInteger(numberValues[1]);
 			  
 		}
 		else {
@@ -17,6 +17,10 @@ public class StringCalculator {
 		}
 		
 		
+	}
+	
+	private static int toInteger(String input) {
+		return Integer.parseInt(input);
 	}
 	
 	
