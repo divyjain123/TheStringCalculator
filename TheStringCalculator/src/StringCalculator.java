@@ -40,9 +40,14 @@ public class StringCalculator {
 	    int n = numberValues.length;
 	    for(int i=0; i<n;i++) {
 	    	if (!numberValues[i].trim().isEmpty())
-	    	sum += toInteger(numberValues[i]);
+	    	{	
+	    	if(toInteger(numberValues[i]) <= 1000){
+	    		sum += toInteger(numberValues[i]);	
+	    	}
+	    	
 	    	if(toInteger(numberValues[i]) < 0){
 	    		negativeNumbers.add((numberValues[i]));
+	    	}
 	    	}
 	    }
 	    
