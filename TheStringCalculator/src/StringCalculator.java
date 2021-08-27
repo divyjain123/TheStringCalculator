@@ -7,7 +7,7 @@ public class StringCalculator {
 		if(input.equals("")){
 			return 0;
 		}
-		else if(input.contains(",")) {
+		else if(input.contains(",") || input.contains("\n")) {
 			
 			    return sum(splitValues(input));
 			    
@@ -24,7 +24,7 @@ public class StringCalculator {
 	}
 	
 	private static String[] splitValues(String input) {
-		return input.split(",");
+		return input.split(",|\n");
 	}
 	
 	private static int sum(String[] numberValues) {
