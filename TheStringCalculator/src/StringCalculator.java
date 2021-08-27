@@ -35,21 +35,21 @@ public class StringCalculator {
 	
 	private static int sum(String[] numberValues) {
 		List<String> negativeNumbers = new ArrayList<>();
-	    for(String negative : numberValues) {
-	    	if(toInteger(negative) < 0){
-	    		negativeNumbers.add((negative));
-	    	}
-	    }
-			if(negativeNumbers.size() > 0) {
-				throw new RuntimeException();
-			}
-			
+	    
 		int sum = 0;
 	    int n = numberValues.length;
 	    for(int i=0; i<n;i++) {
 	    	if (!numberValues[i].trim().isEmpty())
 	    	sum += toInteger(numberValues[i]);
+	    	if(toInteger(numberValues[i]) < 0){
+	    		negativeNumbers.add((numberValues[i]));
+	    	}
 	    }
+	    
+	    if(negativeNumbers.size() > 0) {
+			throw new RuntimeException();
+		}
+	    
 	    return sum;
 	}
 	
