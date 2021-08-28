@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class StringCalculator {
@@ -59,8 +60,15 @@ public class StringCalculator {
 	}
 	
 	private static int findDelimiter(String input) {
-		String specifiedDelimiter = input.substring(2, 3) +"|,";
-        String numbers = input.substring(input.indexOf("\n") + 1);
-        return sum(splitValues(numbers,specifiedDelimiter));
+			String numbers = input.substring(input.indexOf("\n") + 1);
+			String specifiedDelimiter ="";
+		if(input.contains("[")) {
+			specifiedDelimiter = "\\" + input.substring(3, 4);
+			return sum(splitValues(numbers,specifiedDelimiter));
+		}else {
+			specifiedDelimiter = input.substring(2, 3);
+	        return sum(splitValues(numbers,specifiedDelimiter));
+		}
+		
 	}
 }

@@ -1,6 +1,5 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
@@ -64,7 +63,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void SpecifiedDelimiterOfAnyLength() {
-		assertEquals(5,StringCalculator.add("//[***]\\n1***2***3"));
+		assertEquals(6,StringCalculator.add("//[***]\n1***2***3"));
 	}
 	
 
