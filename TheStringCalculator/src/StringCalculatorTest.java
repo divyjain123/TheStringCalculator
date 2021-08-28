@@ -69,5 +69,5 @@ public class StringCalculatorTest {
 	@Test
 	public void MultipleSpecifiedDelimiters() {
 		assertEquals(6,StringCalculator.add("//[*][%]\n1*2%3"));
-
+	}
 }
